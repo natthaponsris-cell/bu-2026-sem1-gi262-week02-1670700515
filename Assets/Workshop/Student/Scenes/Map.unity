@@ -366,7 +366,12 @@ MonoBehaviour:
   - {fileID: 2610949509690204069, guid: 53526382c73312c4bbdf665ed3ee56e2, type: 3}
   playerTiles:
   - {fileID: 7365724651264261338, guid: 40fd79106f0cd4d4aa499f41401cb239, type: 3}
-  obstacleTiles: []
+  obstacleTiles:
+  - {fileID: 5291166318002269242, guid: 413c1aa8e8dffdd448102fbcf99aaf6d, type: 3}
+  - {fileID: 6505163485945331184, guid: 3f8f43eeb72c5ae4b95a6139f5d1a420, type: 3}
+  - {fileID: 5937509869307692887, guid: 96f67739f9f22924f820b5a0ab91eb89, type: 3}
+  - {fileID: 3622615748849206263, guid: 347cc57813f2183419694b9ac8245457, type: 3}
+  - {fileID: 7016356384876519341, guid: 01b14743625ff1d41a313afb6f779145, type: 3}
   exitTile: {fileID: 7025940495585331075, guid: 66e92acc836da4f41bdc3eb615f7c97b, type: 3}
 --- !u!1 &401495253
 GameObject:
