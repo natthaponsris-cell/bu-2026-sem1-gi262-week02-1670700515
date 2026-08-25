@@ -364,6 +364,10 @@ MonoBehaviour:
   foodTiles:
   - {fileID: 620319011660098408, guid: 9c5e6105aa1a9f84788696dfeae00aa7, type: 3}
   - {fileID: 2610949509690204069, guid: 53526382c73312c4bbdf665ed3ee56e2, type: 3}
+  playerTiles:
+  - {fileID: 7365724651264261338, guid: 40fd79106f0cd4d4aa499f41401cb239, type: 3}
+  obstacleTiles: []
+  exitTile: {fileID: 7025940495585331075, guid: 66e92acc836da4f41bdc3eb615f7c97b, type: 3}
 --- !u!1 &401495253
 GameObject:
   m_ObjectHideFlags: 0
