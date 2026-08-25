@@ -178,7 +178,7 @@ MonoBehaviour:
   as03_wall: {fileID: 5291166318002269242, guid: 413c1aa8e8dffdd448102fbcf99aaf6d, type: 3}
   as03_columns: 5
   as03_rows: 5
-  as04_enemyHP: 0a000000140000001e000000
+  as04_enemyHP: 0a0000001e00000019000000
   as04_damage: 5
   as04_target: 2
   as05_n: 3

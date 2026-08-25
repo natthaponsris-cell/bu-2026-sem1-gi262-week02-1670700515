@@ -36,31 +36,6 @@ namespace Workshop.Student
                 Instantiate(playerTiles[rPlayer], new Vector2(0, 0), Quaternion.identity);
             }
 
-            // 2. create obstacles (สร้างกำแพงกั้นแนวตั้งตรงกลาง สูงครึ่งฉาก)
-            if (obstacleTiles != null && obstacleTiles.Length > 0)
-            {
-                int middleX = columns / 2; // ตรงกลางแกน X (ตำแหน่งที่ 5)
-                int halfRows = rows / 2;   // ความสูงครึ่งฉาก (5 แถว)
-
-                for (int y = 0; y < halfRows; y++)
-                {
-                    int rObstacle = UnityEngine.Random.Range(0, obstacleTiles.Length);
-
-                    // กำหนดพิกัด Z = -1f เพื่อให้อยู่ด้านหน้าของพื้นแน่นอน
-                    Vector3 spawnPos = new Vector3(middleX, y, -1f);
-
-                    GameObject wallObj = Instantiate(obstacleTiles[rObstacle], spawnPos, Quaternion.identity);
-                    wallObj.name = "CenterWall_" + middleX + "_" + y;
-
-                    // ปรับ Order in Layer เพิ่มเป็น 5 ดันขึ้นมาเลเยอร์บนสุด
-                    SpriteRenderer sr = wallObj.GetComponent<SpriteRenderer>();
-                    if (sr != null)
-                    {
-                        sr.sortingOrder = 5;
-                    }
-                }
-            }
-
             // 3. create floor (สร้างพื้นก่อน)
             for (int y = 0; y < rows; y++)
             {
@@ -82,6 +57,31 @@ namespace Workshop.Student
                         int r = UnityEngine.Random.Range(0, wallTiles.Length);
                         GameObject tile = Instantiate(wallTiles[r], new Vector2(x, y), Quaternion.identity);
                         tile.name = "Wall" + x + "_" + y;
+                    }
+                }
+            }
+
+            // 2. create obstacles (สร้างกำแพงกั้นแนวตั้งตรงกลาง สูงครึ่งฉาก)
+            if (obstacleTiles != null && obstacleTiles.Length > 0)
+            {
+                int middleX = columns / 2; // ตรงกลางแกน X (ตำแหน่งที่ 5)
+                int halfRows = rows / 2;   // ความสูงครึ่งฉาก (5 แถว)
+
+                for (int y = 0; y < halfRows; y++)
+                {
+                    int rObstacle = UnityEngine.Random.Range(0, obstacleTiles.Length);
+
+                    // กำหนดพิกัด Z = -1f เพื่อให้อยู่ด้านหน้าของพื้นแน่นอน
+                    Vector3 spawnPos = new Vector3(middleX, y, -1f);
+
+                    GameObject wallObj = Instantiate(obstacleTiles[rObstacle], spawnPos, Quaternion.identity);
+                    wallObj.name = "CenterWall_" + middleX + "_" + y;
+
+                    // ปรับ Order in Layer เพิ่มเป็น 5 ดันขึ้นมาเลเยอร์บนสุด
+                    SpriteRenderer sr = wallObj.GetComponent<SpriteRenderer>();
+                    if (sr != null)
+                    {
+                        sr.sortingOrder = 5;
                     }
                 }
             }
